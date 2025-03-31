@@ -182,8 +182,7 @@ img {
 	padding: 0;
 	position: absolute;
 	top: 41px;
-	max-width: 100%;
-	height: auto;
+	width: auto;
 	z-index: 50;
 }
 #body.home .header div h1 {
@@ -290,8 +289,7 @@ img {
 	display: block;
 	margin: 0;
 	padding: 0;
-	max-width: 100%;
-	height: auto;
+	width: auto;
 }
 #body.home .header div ul li a img:hover {
 	filter: alpha(opacity=70);/* Needed for IE8 and old versions */
