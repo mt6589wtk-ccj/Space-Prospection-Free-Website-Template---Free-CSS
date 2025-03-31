@@ -37,26 +37,4 @@ window.onload = function(){
 			getElm[i].lastChild.style.backgroundColor='rgba(0, 0, 0, 0.91)';
 		}
 	};
-	const sharp = require('sharp');
-
-	function resizeImage(inputPath, outputPath, width, height) {
-		sharp(inputPath)
-			.resize(width, height)
-			.toFile(outputPath, (err, info) => {
-				if (err) {
-					console.error('Error resizing image:', err);
-				} else {
-					console.log('Image resized successfully:', info);
-				}
-			});
-	}
-
-	window.onload = function(){
-		// 调整图片大小
-		resizeImage('path/to/input/image.jpg', 'path/to/output/image.jpg', 300, 200);
-
-		let getNavi = document.getElementById('navigation');
-		// 其余代码保持不变
-		// ...
-	};
 };
