@@ -55,8 +55,7 @@ img {
 	display: block;
 	margin: 0;
 	padding: 0;
-	max-width: 100%;
-	height: auto;
+	width: auto;
 }
 #header div ul {
 	display: inline-block;
@@ -70,8 +69,7 @@ img {
 	float: left;
 	margin: 0;
 	padding: 0;
-	max-width: 100%;
-	height: auto;
+	width: auto;
 }
 #header div ul li a {
 	color: #ffffff;
@@ -184,8 +182,7 @@ img {
 	padding: 0;
 	position: absolute;
 	top: 41px;
-	max-width: 100%;
-	height: auto;
+	width: auto;
 	z-index: 50;
 }
 #body.home .header div h1 {
