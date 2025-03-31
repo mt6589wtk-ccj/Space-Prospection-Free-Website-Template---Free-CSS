@@ -221,10 +221,10 @@
 	#header div a.logo {
 		display: block;
 		float: left;
-		height: 60px;
 		margin: 5% 0 0;
 		padding: 0;
-		width: 79%;
+		max-width: 100%;
+		height: auto;
 	}
 	#header div span#mobile-navigation {
 		background: transparent url(../images/mobile/mobile-menu.png) no-repeat;
