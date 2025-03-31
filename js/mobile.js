@@ -5,14 +5,31 @@ window.onload = function(){
 	mobile.setAttribute("id","mobile-navigation");
 	getNavi.parentNode.insertBefore(mobile,getNavi);
 
+	// 設置第三方 Cookie (這是範例，會設置一個叫做 "user-preference" 的 cookie)
+	function setThirdPartyCookie(name, value, days) {
+		let expires = "";
+		if (days) {
+			let date = new Date();
+			date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+			expires = "; expires=" + date.toUTCString();
+		}
+		document.cookie = name + "=" + (value || "") + expires + "; path=/; Secure; SameSite=None; domain=your-third-party-domain.com"; // 修改為你的第三方域名
+	}
+
+	// 當點擊菜單時設置第三方 cookies
+
 	document.getElementById('mobile-navigation').onclick = function(){
 		let a = getNavi.getAttribute('style');
 		if(a){
 			getNavi.removeAttribute('style');
 			document.getElementById('mobile-navigation').style.backgroundImage='url(/images/mobile/mobile-menu.png)';
+			// 在這裡設置第三方 Cookie
+			setThirdPartyCookie('mobile-menu-state', 'closed', 7); // 記錄菜單狀態為關閉
 		} else {
 			getNavi.style.display='block';
 			document.getElementById('mobile-navigation').style.backgroundImage='url(/images/mobile/mobile-close.png)';
+			// 設置第三方 Cookie，記錄菜單狀態為開啟
+			setThirdPartyCookie('mobile-menu-state', 'open', 7);
 		}
 	};
 	let getElm = getNavi.getElementsByTagName("LI");
